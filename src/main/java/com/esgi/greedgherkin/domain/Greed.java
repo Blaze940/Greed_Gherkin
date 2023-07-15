@@ -79,7 +79,7 @@ public class Greed {
                 switch (i) {
                     case 1 -> score += ScoreValue.TRIPLE_ONE.getValue() * ScoreCombo.FOUR_OF_A_KIND_MULTIPLIER.getValue();
                     case 2, 3, 4, 5, 6 ->
-                            score += i * ScoreCombo.FOUR_OF_A_KIND_MULTIPLIER.getValue();
+                            score += i * ScoreCombo.TRIPLE_OF_A_KIND_MULTIPLIER.getValue() * ScoreCombo.FOUR_OF_A_KIND_MULTIPLIER.getValue();
                     default -> throw new IllegalStateException("Unexpected value: " + i);
                 }
             }
@@ -88,7 +88,7 @@ public class Greed {
                 switch (i) {
                     case 1 -> score += ScoreValue.TRIPLE_ONE.getValue() * ScoreCombo.FIVE_OF_A_KIND_MULTIPLIER.getValue();
                     case 2, 3, 4, 5, 6 ->
-                            score += i * ScoreCombo.FIVE_OF_A_KIND_MULTIPLIER.getValue();
+                            score += i * ScoreCombo.TRIPLE_OF_A_KIND_MULTIPLIER.getValue() * ScoreCombo.FIVE_OF_A_KIND_MULTIPLIER.getValue();
                     default -> throw new IllegalStateException("Unexpected value: " + i);
                 }
             }
