@@ -98,7 +98,7 @@ public class Greed {
 
     private void initDiceValueCounter(int [] dice){
         if(!isDiceValid(dice)){
-            throw new IllegalArgumentException("Dice is not valid (must be 6 dice with value from 1 to 6)");
+            throw new IllegalArgumentException("Dice are not valid . Must be between 1 and 6 (included)");
         }
 
         //First index is 0 and never used
@@ -111,7 +111,7 @@ public class Greed {
 
     //Check if dice has good value (1 to 6)
     private boolean isDiceValid(int [] dice){
-        if(dice.length != 6){
+        if(dice.length > 6){
             return false;
         }
 
