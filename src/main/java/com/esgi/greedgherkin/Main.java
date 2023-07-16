@@ -23,8 +23,13 @@ public class Main {
             }
 
             // Calculate the score
-            int score = greed.score(dice);
-            System.out.println("Score : " + score);
+            int score;
+            try {
+                score = greed.score(dice);
+                System.out.println("Score : " + score);
+            } catch (IllegalArgumentException e) {
+                System.out.println(e.getMessage());
+            }
 
             // Ask the user if he wants to replay
             System.out.print("Rejouer ? (O/N) : ");
